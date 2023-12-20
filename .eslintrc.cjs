@@ -14,5 +14,14 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/typedef': [
+      'warn',
+      {
+        arrowParameter: true,
+        variableDeclaration: true,
+        variableDeclarationIgnoreFunction: false
+      }
+    ],
   },
-}
+};
