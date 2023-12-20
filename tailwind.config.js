@@ -5,27 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      'primary': '#219C90',
-      'danger': '#ef4444',
-      'green': '#13ce66',
-      'yellow': '#ffc82c',
-      'secondary': '#273444',
-      'gray': '#8492a6',
-      'gray-light': '#d3dce6',
-    },
-    fontFamily: {
-      sans: ['Comfortaa', 'sans-serif'],
-      serif: ['Comfortaa', 'serif'],
-    },
     extend: {
-      spacing: {
-        '8xl': '96rem',
-        '9xl': '128rem',
+      colors: {
+        'tk-primary': '#219C90',
+        'tk-danger': '#ef4444',
+        'tk-green': '#13ce66',
+        'tk-yellow': '#ffc82c',
+        'tk-secondary': '#273444',
+        'tk-gray': '#8492a6',
+        'tk-gray-light': '#d3dce6',
       },
-      borderRadius: {
-        '4xl': '2rem',
-      }
+      fontFamily: {
+        sans: ['Comfortaa', 'sans-serif'],
+        serif: ['Comfortaa', 'serif'],
+      },
     }
   },
   plugins: [
