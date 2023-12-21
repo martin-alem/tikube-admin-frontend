@@ -1,5 +1,6 @@
 import { JSX } from "react";
-import { IPaginationDirection, IPaginationProp } from "../../utils/types.ts";
+import { IPaginationProp } from "../../utils/types.ts";
+import { PaginationDirection } from "../../utils/enum.ts";
 
 export default function Pagination({
   start,
@@ -21,13 +22,13 @@ export default function Pagination({
       </div>
       <div className="flex flex-1 justify-between sm:justify-end">
         <div
-          onClick={() => update(IPaginationDirection.PREV)}
+          onClick={() => update(PaginationDirection.PREV)}
           className="relative inline-flex items-center cursor-pointer rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
         >
           Previous
         </div>
         <div
-          onClick={() => update(IPaginationDirection.NEXT)}
+          onClick={() => update(PaginationDirection.NEXT)}
           className="relative ml-3 inline-flex cursor-pointer items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
         >
           Next

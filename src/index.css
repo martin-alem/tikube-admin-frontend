@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --toastify-color-info: #219C90 !important;
+    --toastify-color-success: #13ce66 !important;
+    --toastify-color-warning: #eab308 !important;
+    --toastify-color-error: #ef4444 !important;
+
+    --toastify-icon-color-info: var(--toastify-color-info) !important;
+    --toastify-icon-color-success: var(--toastify-color-success) !important;
+    --toastify-icon-color-warning: var(--toastify-color-warning) !important;
+    --toastify-icon-color-error: var(--toastify-color-error) !important;
+
+    --toastify-toast-width: 620px !important;
+    --toastify-font-family: Comfortaa !important;
+    --toastify-z-index: 99999999 !important;
+}
