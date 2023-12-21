@@ -33,7 +33,7 @@ export interface ILog {
 }
 
 export interface ILogResult {
-  logs: ILog[];
+  data: ILog[];
   total: number;
 }
 

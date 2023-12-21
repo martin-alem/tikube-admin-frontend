@@ -8,16 +8,13 @@ import {
 } from "@heroicons/react/24/outline";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/16/solid";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { classNames } from "../../utils/helper.ts";
 
 const navigation = [
   { name: "Dashboard", href: "", icon: HomeIcon },
   { name: "Logs", href: "logs", icon: FolderIcon },
   { name: "Logout", href: "logout", icon: ArrowLeftStartOnRectangleIcon },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Home(): JSX.Element {
   const location = useLocation();

@@ -52,7 +52,7 @@ export default function Logs(): JSX.Element {
 
   useEffect(() => {
     if (isSuccessFetchLogs) {
-      setLogs(dataFetchLogs.logs);
+      setLogs(dataFetchLogs.data);
       setTotalResult(dataFetchLogs.total);
     }
   }, [isSuccessFetchLogs, dataFetchLogs]);
@@ -69,7 +69,7 @@ export default function Logs(): JSX.Element {
       <main className="py-10 lg:pl-72">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="px-4 sm:px-6 lg:px-8">
-            <div className="sticky top-0 z-1 bg-white bg-opacity-75 py-3.5 backdrop-blur backdrop-filter sm:flex sm:justify-between">
+            <div className="sticky top-0 z-10 bg-white bg-opacity-75 py-3.5 backdrop-blur backdrop-filter sm:flex sm:justify-between">
               <div className="w-1/5">
                 <SelectInput
                   label={"Sort"}
@@ -134,7 +134,7 @@ export default function Logs(): JSX.Element {
                                 "whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8",
                               )}
                             >
-                              {log.source}
+                              {log.logLevel}
                             </td>
                             <td
                               className={classNames(
@@ -142,6 +142,16 @@ export default function Logs(): JSX.Element {
                                   ? "border-b border-gray-200"
                                   : "",
                                 "whitespace-nowrap hidden px-3 py-4 text-sm text-gray-500 sm:table-cell",
+                              )}
+                            >
+                              {log.source}
+                            </td>
+                            <td
+                              className={classNames(
+                                log.id !== logs.length - 1
+                                  ? "border-b border-gray-200"
+                                  : "",
+                                "whitespace-nowrap hidden px-3 py-4 text-sm text-gray-500 lg:table-cell",
                               )}
                             >
                               {log.message}
