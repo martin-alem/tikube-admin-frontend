@@ -1,4 +1,5 @@
 import { LogLevel, PaginationDirection } from "./enum.ts";
+import React, { ReactNode } from "react";
 
 export interface IPair {
   id: string;
@@ -40,6 +41,8 @@ export interface ILogResult {
 export interface ILogQueryPayload {
   limit: number;
   offset: number;
+  levelFilter: string;
+  dateFilter: string;
 }
 
 export interface IServerError {
@@ -48,4 +51,20 @@ export interface IServerError {
   method: string;
   statusCode: number;
   timeStamp: number;
+}
+
+export interface ITextInputProp {
+  id: string;
+  type?: string;
+  name?: string;
+  placeholder?: string;
+  disabled?: boolean;
+  label?: string;
+  prefixIcon?: ReactNode;
+  value?: string;
+  capitalize?: boolean;
+  handleOnChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleOnBlur: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
+  error?: string;
 }

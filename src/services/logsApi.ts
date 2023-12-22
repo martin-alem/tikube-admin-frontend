@@ -11,7 +11,7 @@ export const logsApi = createApi({
   endpoints: (builder) => ({
     getLogs: builder.query<ILogResult, ILogQueryPayload>({
       query: (payload) => ({
-        url: `/admin/logs?limit=${payload.limit}&offset=${payload.offset}`,
+        url: `/admin/logs?limit=${payload.limit}&offset=${payload.offset}&level_filter=${payload.levelFilter}&date_filter=${payload.dateFilter}`,
         method: "GET",
       }),
     }),
